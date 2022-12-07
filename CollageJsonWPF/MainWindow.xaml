@@ -1,0 +1,23 @@
+﻿<Window x:Class="CollageJsonWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollageJsonWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox IsReadOnly="True" Text="{Binding LastName}"/>
+            <TextBox IsReadOnly="True" Text="{Binding FirstName}"/>
+            <TextBox IsReadOnly="True" Text="{Binding Patronymic}"/>
+            <StackPanel Orientation="Horizontal" DataContext="{Binding PassportInfo}">
+                <TextBox IsReadOnly="True" Text="{Binding SeriesNumber}"/>
+                <TextBox IsReadOnly="True" Text="{Binding IssuingDepartment}"/>
+                <TextBox IsReadOnly="True" Text="{Binding Date}"/>
+            </StackPanel>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
